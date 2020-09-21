@@ -6,8 +6,6 @@ class Calculatrice {
     public static void main(final String[] args) {
 
     }
-
-    // Initialisation
     Scanner sc = new Scanner(System.in);
     String donnee;
     String[] tableaudonnee;
@@ -19,16 +17,13 @@ class Calculatrice {
             " => Navré mais je ne peux faire que des opérations à deux entiers ...",
             " => \nVeux-tu effectuer une nouvelle opération ?", };
 
-    // calculate method
     public void calculer() {
 
-        // MAIN CODE
         while (true) {
-            // Presentation
+
             System.out.println("");
             System.out.println(messageaccueil);
 
-            // Operation
             try {
                 System.out.print("Tape ton opération: ");
                 donnee = sc.nextLine();
@@ -56,7 +51,6 @@ class Calculatrice {
                             System.out.print("Calcul impossible");
                     }
 
-                  
                     System.out.print(donnee + "=> Le résultat est " + resultat);
                 } else if (Pattern.matches("(.*)([a-zA-Z])(.*)", donnee)) {
                   
